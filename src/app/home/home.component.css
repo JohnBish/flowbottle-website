@@ -1,0 +1,21 @@
+.card-block {
+    padding: 20px;
+}
+
+.vertical-spaced {
+    padding-top: 2%;
+}
+
+.img-circle {
+    max-width: 80%;
+    max-height: 80%;
+    margin: 5%;
+    border-radius: 50%;
+    border: 10px solid white;
+    -webkit-transition: border 0.25s;
+    transition: border 0.12s;
+}
+
+.img-circle:hover {
+    border: 0px solid white;
+}

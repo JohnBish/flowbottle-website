@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Avenir";
+    src: url('../../assets/AvenirLTStd-Roman.otf') format("opentype");
+}
+
+.title {
+    font-family: Avenir;
+    -webkit-transition: letter-spacing 0.5s;
+    transition: letter-spacing 0.5s;
+}
+
+.title:hover {
+    letter-spacing: 0.5px;
+}

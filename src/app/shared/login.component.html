@@ -1,0 +1,22 @@
+<ng-template #login>
+  <div class="input-group">
+      <input type="text" class="form-control" placeholder="Email">
+      <input type="password" class="form-control" placeholder="Password">
+  </div>
+  <div class="text-center">
+    <button (click)="login()" class="btn btn-primary active" *ngIf="!(user | async)?.uid">Login</button>
+    <br>
+    <button (click)="loginAnonymous(); p.close();" class="btn btn-primary" *ngIf="!(user | async)?.uid"
+    [routerLink]="['dashboard']">
+      Anonymous Login
+    </button>
+    <button (click)="logout(); p.close();" class="btn btn-primary" *ngIf="(user | async)?.uid">
+      Logout
+    </button>
+  </div>
+</ng-template>
+<div [ngbPopover]="login"
+#p="ngbPopover" placement="bottom-right" container="body" (mouseenter)="p.open()"
+popover-hoverable="true" id="#signin" stay="true">
+    Sign In
+</div>
